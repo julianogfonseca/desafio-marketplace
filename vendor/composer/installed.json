@@ -3559,5 +3559,58 @@
         ],
         "description": "Symfony DomCrawler Component",
         "homepage": "https://symfony.com"
+    },
+    {
+        "name": "pagarme/pagarme-php",
+        "version": "v2.0",
+        "version_normalized": "2.0.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/pagarme/pagarme-php.git",
+            "reference": "cb19025c63fb526ad137c6c4ff6fa2c33224b2e2"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/pagarme/pagarme-php/zipball/cb19025c63fb526ad137c6c4ff6fa2c33224b2e2",
+            "reference": "cb19025c63fb526ad137c6c4ff6fa2c33224b2e2",
+            "shasum": ""
+        },
+        "require": {
+            "ext-curl": "*",
+            "ext-json": "*",
+            "ext-mbstring": "*",
+            "php": ">5.3"
+        },
+        "require-dev": {
+            "simpletest/simpletest": "*"
+        },
+        "time": "2016-06-29 04:06:22",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "classmap": [
+                "lib/Pagarme"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Pagar.me and contributors",
+                "homepage": "https://github.com/pagarme/pagarme-php/graphs/contributors"
+            }
+        ],
+        "description": "Pagar.me PHP Library",
+        "homepage": "http://pagar.me",
+        "keywords": [
+            "api",
+            "pagamento brasil",
+            "pagamentos",
+            "pagar.me",
+            "pagarme",
+            "payments brazil"
+        ]
     }
 ]

@@ -15,10 +15,11 @@ class CreateUsersTable extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->increments('id');
+            //pode ser a Maria(dona) ou Parceiros 
+            $table->string('type');
+            //chave estrangeira para os produtos pertencentes ao fornecedor
+            $table->integer('products_id');
             $table->string('name');
-            $table->string('email')->unique();
-            $table->string('password');
-            $table->rememberToken();
             $table->timestamps();
         });
     }

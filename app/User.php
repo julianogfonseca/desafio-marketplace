@@ -7,23 +7,25 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
 {
-    use Notifiable;
+	//classe User é equivalente ao fornecedor
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
-    protected $fillable = [
-        'name', 'email', 'password',
-    ];
+    //relação 1 para n de produtos e fornecedores
+    public function products(){
+        return $this->hasMany('App\Product');
+    }
 
-    /**
-     * The attributes that should be hidden for arrays.
-     *
-     * @var array
-     */
-    protected $hidden = [
-        'password', 'remember_token',
-    ];
+    //getters e setters
+
+    public function getName(){
+    	return $this->name;
+    }
+
+    public function getType(){
+    	return $this->type;
+    }    
+
+    public function getProducts(){
+    	return $this->products;
+    }
+
 }
