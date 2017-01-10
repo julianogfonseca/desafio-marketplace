@@ -10,4 +10,19 @@ class Purchase extends Model
     public function products(){
     	return $this->belongsToMany('App\Product');
     }
+	//relação n para n de fornecedores e vendas
+    public function suppliers(){
+    	return $this->belongsToMany('App\User');    	
+    }
+
+    public function setAmount($amount){
+    	$this->amount = $amount;
+    }
+	
+	//salva a compra
+    public function create($amount){
+    	$this->setAmount();
+    	$this->save();
+    }
+
 }

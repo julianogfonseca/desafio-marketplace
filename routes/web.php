@@ -18,4 +18,6 @@ Route::get('/', function () {
 //rota da página de compra/checkout
 Route::get('/purchase', 'ProductsController@index');
 Route::post('/purchase','PurchaseController@checkout');
+Route::get('/success','PurchaseController@success');
+
 	

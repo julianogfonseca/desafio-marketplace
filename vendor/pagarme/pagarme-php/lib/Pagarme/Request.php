@@ -26,7 +26,7 @@ class PagarMe_Request extends PagarMe {
 		$response = $client->run();
 		$decode = json_decode($response["body"], true);
 		if($decode === NULL) {
-			throw new Exception("Failed to decode json from response.\n\n Response: ".$response);
+			throw new Exception("Failed to decode json from response.\n\n Response: ".$response["body"]);
 		} else {
 			if($response["code"] == 200) {
 				return $decode;

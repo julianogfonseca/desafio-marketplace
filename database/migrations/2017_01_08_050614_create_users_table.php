@@ -19,7 +19,9 @@ class CreateUsersTable extends Migration
             $table->string('type');
             //chave estrangeira para os produtos pertencentes ao fornecedor
             $table->integer('products_id');
+            $table->float('profit');
             $table->string('name');
+            $table->integer('purchases_id')->nullable();
             $table->timestamps();
         });
     }

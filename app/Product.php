@@ -30,11 +30,28 @@ class Product extends Model
     }
 
     public function getValue(){
-    	return $this->value;
+    	return floatval($this->value)  ;
     }
 
     public function getUser(){
     	return $this->user;
     }
+
+    public function getProducts(){
+        return Product::all();
+    }
+
+    public function getFreight(){
+        return floatval($this->freight);
+    }
+
+    public function amount($productsToCalc){
+        $prod = new Product();
+        $amount = 0;
+        foreach($productsToCalc as $product){
+            $amount += $product->getValue() + 42;
+        }
+        return $amount * 100.0;
+    } 
 
 }

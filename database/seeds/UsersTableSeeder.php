@@ -15,6 +15,7 @@ class UsersTableSeeder extends Seeder
     DB::table('users')->insert([
       'type'       => 'Dona',
       'products_id' => 1,
+      'profit'    => 0,  
       'name'      => 'Maria Barros',
       //timestamp da criação
       'created_at' => Carbon::now(),
@@ -24,6 +25,7 @@ class UsersTableSeeder extends Seeder
     DB::table('users')->insert([
       'type'       => 'Parceiro',
       'products_id' => 2,
+      'profit'    => 0,
       'name'      => 'João Thiago Samuel Cavalcanti',
       'created_at' => Carbon::now(),
       'updated_at' => Carbon::now(),
@@ -32,6 +34,7 @@ class UsersTableSeeder extends Seeder
     DB::table('users')->insert([
       'type'       => 'Parceiro',
       'products_id' => 3,
+      'profit'    => 0,
       'name'      => 'César Anthony João Martins',
       'created_at' => Carbon::now(),
       'updated_at' => Carbon::now(),

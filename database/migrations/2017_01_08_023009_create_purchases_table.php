@@ -16,6 +16,7 @@ class CreatePurchasesTable extends Migration
         //criação da migration das compras
         Schema::create('purchases', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('users_id')->nullable();
             //chave estrangeira dos produtos pertencentes a compra
             $table->integer('products_id')->nullable();
             $table->float('amount');

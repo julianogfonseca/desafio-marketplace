@@ -24,6 +24,7 @@ class CreateProductsTable extends Migration
             $table->string('img');
             $table->string('description');
             $table->float('value');
+            $table->integer('freight')->default(42);
             $table->timestamps();
         });
     }
