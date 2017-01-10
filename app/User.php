@@ -20,6 +20,7 @@ class User extends Authenticatable
         return $this->belongsToMany('App\Purchase');        
     }
 
+    //salva o lucro de cada usuário na compra
     public function storeProfit(){
         $product = new Product();
         $products = $product->getProducts();

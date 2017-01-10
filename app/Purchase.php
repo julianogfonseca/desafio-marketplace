@@ -3,6 +3,8 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use PagarMe;
+use PagarMe_Transaction;
 
 class Purchase extends Model
 {
@@ -19,10 +21,14 @@ class Purchase extends Model
     	$this->amount = $amount;
     }
 	
-	//salva a compra
-    public function create($amount){
-    	$this->setAmount();
-    	$this->save();
+
+    public function makeTransaction($amount, $token){
+        
+        Pagarme::setApiKey("ak_test_JoTvtWMJKJWNroabQaQuE15xpiQevp");
+
+        $transaction = PagarMe_Transaction::findById($token);
+
+        $transaction->capture($amount); 
     }
 
 }

@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Product extends Model
 {
+
 	//relação n para n de produtos e compras
 	public function purchases(){
 		return $this->belongsToMany('App\Purchase');
@@ -49,7 +50,7 @@ class Product extends Model
         $prod = new Product();
         $amount = 0;
         foreach($productsToCalc as $product){
-            $amount += $product->getValue() + 42;
+            $amount += $product->getValue() + 42.0;
         }
         return $amount * 100.0;
     } 
